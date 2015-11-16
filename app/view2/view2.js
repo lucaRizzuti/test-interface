@@ -9,6 +9,25 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
 
-}]);
+.controller('View2Ctrl', fnCtrl);
+
+//dependecy injection
+fnCtrl.$inject = [
+  '$scope',
+  '$log',
+  'dataServiceUtil'
+];
+
+function fnCtrl($scope, $log, dataServiceUtil) {
+
+  dataServiceUtil.getData();
+
+
+  //$ curl 'https://api.github.com/user/repos?page=2&per_page=100'
+
+  //$http.post('/api/authenticate', { username: username, password: password })
+  //    .success(function (response) {
+  //      callback(response);
+  //    });
+}
