@@ -5,7 +5,7 @@ It's just a study about github API and angularJs.
 
 ## Why?
 
-Just for fun and for test all the opzions available on the API (https://developer.github.com/v3/) via angularJS.
+Just for fun and for test all the options available on the API (https://developer.github.com/v3/) via angularJS.
 
 ### How?
 
