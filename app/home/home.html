@@ -1,0 +1,28 @@
+<div class="container" ng-controller="HomeCtrl">
+    <div class="row">
+        <form name="myForm">
+            <div class="control-group">
+                <div class="controls">
+                    <input type="text" name="username" ng-model="username" placeholder="enter username" required/>
+                    <span class="error" ng-show="myForm.username.required">Required!</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input type="password" name="pwd" ng-model="password" placeholder="enter password" required/>
+                    <span class="error" ng-show="myForm.pwd.required">Required!</span>
+                </div>
+            </div>
+            <button ng-click="auth()">Login</button>
+        </form>
+    </div>
+
+    <div>
+        output: {{output}}
+    </div>
+
+    <div ng-repeat="repository in response">
+        <my-app-repository item="repository"></my-app-repository>
+    </div>
+
+</div>
