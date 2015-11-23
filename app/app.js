@@ -3,6 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+  "ngMaterial",
+  "ngAnimate",
   'myApp.home',
   'myApp.version'
 ]).

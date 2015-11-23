@@ -1,21 +1,37 @@
 <div class="container" ng-controller="HomeCtrl">
-    <div class="row">
+
         <form name="myForm">
-            <div class="control-group">
-                <div class="controls">
-                    <input type="text" name="username" ng-model="username" placeholder="enter username" required/>
-                    <span class="error" ng-show="myForm.username.required">Required!</span>
+            <div layout="row">
+                <div flex="40">
+                    <md-content layout-padding>
+                    <md-input-container class="md-block">
+                        <label>username</label>
+                        <input md-maxlength="30" required name="username" ng-model="username">
+                        <div ng-messages="myForm.description.$error">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    </md-content>
+                </div>
+                <div flex="40">
+                    <md-content layout-padding>
+                        <md-input-container class="md-block">
+                            <label>password</label>
+                            <input type="password" name="pwd" ng-model="password" required/>
+                            <div ng-messages="myForm.description.$error">
+                                <div ng-message="required">This is required.</div>
+                            </div>
+                        </md-input-container>
+                    </md-content>
+                </div>
+                <div flex="20">
+                    <md-input-container class="md-block">
+                    <button class="md-raised md-primary md-button md-ink-ripple" ng-click="auth()">Login</button>
+                        </md-input-container>
                 </div>
             </div>
-            <div class="control-group">
-                <div class="controls">
-                    <input type="password" name="pwd" ng-model="password" placeholder="enter password" required/>
-                    <span class="error" ng-show="myForm.pwd.required">Required!</span>
-                </div>
-            </div>
-            <button ng-click="auth()">Login</button>
         </form>
-    </div>
+
 
     <div>
         output: {{output}}

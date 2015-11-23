@@ -7,7 +7,7 @@ angular.module( 'myApp.home', ['ngRoute'])
     }])
 
     .controller( 'HomeCtrl', function LoginController($scope) {
-        $scope.username = 'lucaRizzuti';
+        $scope.username = '';
         $scope.password = '';
         $scope.success = false;
         $scope.auth = function() {
